@@ -9,14 +9,14 @@ let overage = (budgetTravel-(costActivities*numberOfDays));
 let missingBudget = ((costActivities*numberOfDays)-budgetTravel);
 
 if ((costActivities*numberOfDays) > budgetTravel){
-    alert("\nAlerta, tu presupuesto es insuficiente, te faltan "+missingBudget+ " $");
+    alert("Lugar de Destino: "+travelDestination+"\nDuracion del viaje: "+numberOfDays+" días\nPresupuesto estimado: "+budgetTravel+"\nAlerta, tu presupuesto es insuficiente, te faltan "+missingBudget+ " $");
 }
 else{
     if ((costActivities*numberOfDays) == budgetTravel){
-        alert("\nExcelente, tu presupuesto es suficiente");
+        alert("Lugar de Destino: "+travelDestination+"\nDuracion del viaje: "+numberOfDays+" días\nPresupuesto estimado: "+budgetTravel+"\nExcelente, tu presupuesto es suficiente");
     }
     else{
-        alert("\nExcelente, tu presupuesto es suficiente y te sobran "+overage+ " $");
+        alert("Lugar de Destino: "+travelDestination+"\nDuracion del viaje: "+numberOfDays+" días\nPresupuesto estimado: "+budgetTravel+"\nExcelente, tu presupuesto es suficiente y te sobran "+overage+ " $");
     }
 }
 let change = prompt("Presiona '0' para cambiar tu Presupuesto o '1' para cambiar la duración de tu viaje:");
