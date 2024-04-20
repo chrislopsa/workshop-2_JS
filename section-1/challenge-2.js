@@ -1,3 +1,8 @@
+import {
+    validateNumber,
+    showAvailability
+} from '../functions.js';
+
 let souvenirsStock = [];
 let option; 
 let flag = true;
@@ -5,37 +10,16 @@ let count = 0;
 let showSouvenirs = "";
 let namesouvenir, price, available, souvenir;
 
-function validateNumber(message) {
-    do {
-        num = prompt(message);
-        if (isNaN(num)) {
-            alert("El valor ingresado no es valido, intenta de nuevo.");
-        }
-    } while (isNaN(num));
-    return (num);
-}
-function showAvailability(value) {
-    if(value){
-        return ("Si");
-    }
-    else{
-        return ("No");
-    }
-}
-
-
 while(flag){
     do{
         option = prompt("presiona 1 para añadir un souvenir, presiona 2 para ver la lista de souvenirs o 3 para salir.");
 
         if (option == '3'){
             flag = false;
-            break;
-            
+            break;     
         }
         else{
-            if (option == '1') {
-                
+            if (option == '1') {   
                 namesouvenir = prompt("Nombre del souvenir:");
                 price = validateNumber("precio:");
                 available = showAvailability(confirm("Presiona 'Aceptar' si el souvenir se encuentra disponible o 'Cancelar' si no se encuentra disponible"));
