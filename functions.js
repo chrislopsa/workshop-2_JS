@@ -1,4 +1,4 @@
-export function validateNumber(message) {
+export function validateIsNumber(message) {
     let num;
     do {
         num = prompt(message);
@@ -6,7 +6,7 @@ export function validateNumber(message) {
             alert("El valor ingresado no es valido, intenta de nuevo.");
         }
     } while (isNaN(num));
-    return (num);
+    return Number(num);
 }
 export function showAvailability(value) {
     if(value){
@@ -15,4 +15,16 @@ export function showAvailability(value) {
     else{
         return ("No");
     }
+}
+export function validateOptions(options,message){
+    let option;
+    do{
+        option = prompt(message);
+        if (options.includes(option.toUpperCase())){
+            return option.toUpperCase();
+        }
+        else{
+            alert("El valor ingresado no es valido, intenta de nuevo.");
+        }
+    }while(!options.includes(option));
 }
